@@ -17,14 +17,14 @@ cd $HOME/Downloads
 #sudo apt-add-repository ppa:agornostal/ulauncher
 #sudo apt install software-properties-common wget neovim xclip unzip unrar ranger  git ncdu tree tmux htop zsh i3 i3blocks thunar tumbler lxappearance blender gimp firefox build-essential avrdude gcc gdb llvm filezilla mpv ulauncher hexchat irssi weechat mpd ncmpcpp mpc libreoffice krita cmake
 #sudo apt install kicad-doc-en kicad wine winetricks ulauncher hexedit feh neofetch openssh-server bleachbit filelight scrot ffmpeg vlc handbrake pandoc gcompris childsplay scratch darktable rawtherapee inkscape okular
-#sudo apt install rsync filezilla audacity lmms clamav clamtk a52dec faac flac jasper lame wavpack x264 thunderbird p7zip unrar tar conky kodi arduino python3-pandas python3-numpy python3-matplotlib python3-ipdb rtorrent python3-mpd python3-virtualenv vsftpd
+#sudo apt install rsync filezilla audacity lmms clamav clamtk a52dec faac flac jasper lame wavpack x264 thunderbird p7zip unrar tar conky kodi arduino python3-pandas python3-numpy python3-matplotlib python3-ipdb rtorrent python3-mpd python3-virtualenv python3-psycopg2 vsftpd
 #sudo apt install cura unclutter compton blueman rxvt-unicode fish parcellite nitrogen openbox obconf
 #mkdir -p $HOME/.mpd/playlists
 #chsh -s $(which zsh)
 #sudo snap install freecad 
 #unset ZSH
 #git clone https://github.com/fcourchesne/dotfiles $HOME/.dotfiles
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+#sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 #mv $HOME/.zshrc $HOME/.zshrc.backup
 #ln -s $HOME/.dotfiles/.zshrc.main $HOME/.zshrc
 #source $HOME/.zshrc
@@ -66,7 +66,8 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 # else
 # 	# Not a VM
 # 	echo "This is not a VM"
-# 	sudo apt install virtualbox virtualbox-guest-utils
+    #sudo apt install virtualbox virtualbox-ext-pack virtualbox-guest-additions-iso
+    echo "TBD if should use qemu for vms"
 # fi
 
 
@@ -81,9 +82,13 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 #ulauncher &
 #docker build -t basic_python .
 #docker run basic_python
+#docker pull postgres
+#docker pull dpage/pgadmin4
+#docker pull nextcloud
+#docker pull homeassistant/home-assistant:stable
+
 #sudo apt install node-typescript python3-pip obs-studio
 #sudo pip3 install youtube-dl 
-#wget https://trac.chirp.danplanet.com/chirp_daily/LATEST/chirp-daily-20210310.flatpak $HOME/Downloads/
 #sudo apt install python3-notebook python3-plotly 
 #sudo apt install python3-requests
 #sudo snap install bitwarden
@@ -156,6 +161,10 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 #chmod +x ~/.bin/cht.sh
 #cht.sh --standalone-install
 #sudo snap install dolphin-emulator
+#wget https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso
+#wget https://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-latest.exe
+#wget https://www.spice-space.org/download/windows/spice-webdavd/spice-webdavd-x86-latest.msi
+
 
 
 
@@ -163,8 +172,7 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 
 
 # TODO: chirp https://trac.chirp.danplanet.com/chirp_daily/LATEST/chirp-daily-20210310.flatpak
-#prezentare 
-#cinelerra 
+# docker portainer
 #python3-postgres
 #insync
 #plank
@@ -184,3 +192,5 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 #rm $HOME/Downloads/ltspice.exe
 #LTSpice & # alias in zshrc
 # .git files
+#wget https://trac.chirp.danplanet.com/chirp_daily/LATEST/chirp-daily-20210310.flatpak 
+#mv chirp-daily-20210310.flatpak $HOME/.bin/chirp.flatpak
