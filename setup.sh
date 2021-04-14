@@ -220,3 +220,4 @@ sudo flatpak install calibre
 
 
 echo "TODO: removed dunst, test i3 is ok"
+echo "TODO: Install pyside6"
