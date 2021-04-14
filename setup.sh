@@ -3,6 +3,7 @@ ORIGINAL_DIR=$(pwd)
 read -p "Make sure that you have the SSH key installed on this machine before proceeding (in ~/.ssh)" -n1 -s
 # mkdir -p $HOME/.bin
 cd $HOME/Downloads
+#sudo dpkg --add-architecture i386  
 # sudo pkcon refresh && sudo pkcon update
 # sudo apt install apt-transport-https curl gnupg
 # curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
@@ -25,11 +26,12 @@ cd $HOME/Downloads
 # wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 # sudo mv signal-desktop-keyring.gpg /usr/share/keyrings/
 # sudo echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+# sudo add-apt-repository ppa:jonaski/strawberry
 # sudo add-apt-repository ppa:team-xbmc/ppa
 # sudo pkcon refresh && sudo pkcon update
-# sudo apt install brave-browser software-properties-common wget neovim xclip unzip unrar ranger  git ncdu tree tmux htop zsh i3 i3blocks thunar tumbler lxappearance blender gimp firefox build-essential avrdude gcc gdb llvm filezilla mpv ulauncher hexchat irssi weechat mpd ncmpcpp mpc libreoffice krita cmake kicad-doc-en kicad wine winetricks ulauncher hexedit feh neofetch openssh-server bleachbit filelight scrot ffmpeg vlc handbrake pandoc gcompris childsplay scratch darktable rawtherapee
+# sudo apt install brave-browser software-properties-common wget neovim vim-gtk3 xclip unzip unrar ranger  git ncdu tree tmux htop zsh i3 i3blocks thunar tumbler lxappearance blender gimp firefox build-essential avrdude gcc gdb llvm filezilla mpv ulauncher hexchat irssi weechat mpd ncmpcpp mpc libreoffice krita cmake kicad-doc-en kicad wine32 winetricks ulauncher hexedit feh neofetch openssh-server bleachbit filelight scrot ffmpeg vlc handbrake pandoc gcompris childsplay scratch darktable rawtherapee
 # sudo apt install inkscape okular rsync filezilla audacity lmms clamav clamtk a52dec faac flac jasper lame wavpack x264 thunderbird p7zip unrar tar conky kodi arduino
-#sudo apt install vsftpd sudo apt unclutter compton blueman rxvt-unicode fish parcellite nitrogen openbox obconf keychain adb fastboot node-typescript obs-studio fbreader flameshot remmina remmina-plugin-spice tigervnc-standalone-server kubuntu-driver-manager libreoffice-kde kubuntu-restricted-extras gufw ktorrent yakuake speedcrunch kfind redshift plasma-applet-redshift-control llvm lldb ripgrep docker-ctop signal-desktop kdenlive picard usb-creator-kde timeshift aria2 stacer wireshark aircrack-ng radare2 radare2-cutter nmap virt-manager openscad foliate dictd dict dict-gcide dict-wn dict-jargon dict-foldoc digikam artha insync golang plank 
+# sudo apt install vsftpd sudo apt unclutter compton blueman rxvt-unicode fish parcellite nitrogen openbox obconf keychain adb fastboot node-typescript obs-studio fbreader flameshot remmina remmina-plugin-spice tigervnc-standalone-server kubuntu-driver-manager libreoffice-kde kubuntu-restricted-extras gufw ktorrent yakuake speedcrunch kfind redshift plasma-applet-redshift-control llvm lldb ripgrep docker-ctop signal-desktop kdenlive picard usb-creator-kde timeshift aria2 stacer wireshark aircrack-ng radare2 radare2-cutter nmap virt-manager openscad foliate dictd dict dict-gcide dict-wn dict-jargon dict-foldoc digikam artha insync golang plank strawberry gvim zsnes
 #sudo apt install python python-setuptools python3-pandas python3-numpy python3-matplotlib python3-ipdb rtorrent python3-mpd python3-virtualenv python3-psycopg2 python3-pip python3-notebook python3-plotly python3-requests python3-postgresql jupyter
 #sudo pip3 install youtube-dl 
 # sudo apt install gerbv
@@ -49,7 +51,6 @@ cd $HOME/Downloads
 # bash ~/.dotfiles/install.sh
 # source $HOME/.zshrc
 # WINEARCH=win32 WINEPREFIX=$HOME/.wine32 winetricks corefonts
-# WINEARCH=win64 WINEPREFIX=$HOME/.wine64 winetricks corefonts
 # if [ -d "$HOME/.vim" ]
 # then
 # 	mv $HOME/.vim $HOME/.vim.backup
@@ -61,6 +62,8 @@ cd $HOME/Downloads
 # mkdir -p $HOME/.config/nvim
 # ln -s $HOME/.vim/.vimrc.complete $HOME/.config/nvim/init.vim
 # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # nvim -c "PlugInstall | quit | qa!"
 
 #  read -p "Is this a VM? (y/N)" -n 1 -r
@@ -115,7 +118,8 @@ cd $HOME/Downloads
 # cd $ORIGINAL_DIR/vscode_samples/python/
 # code .
 # cd $ORIGINAL_DIR/vscode_samples/html/
-echo "TODO: configure vscode for GO"
+# code .
+# cd $ORIGINAL_DIR/vscode_samples/go/src/test/
 # code .
 # echo ''
 # echo ''
@@ -184,25 +188,35 @@ printf "TODO: Add on USB key with this VM image: nomachine, iso drivers for qemu
 # wget https://trac.chirp.danplanet.com/chirp_daily/daily-20210406/chirp-daily-20210406.flatpak
 # flatpak install chirp-daily-20210406.flatpak
 
+# git clone https://github.com/go-delve/delve
+# cd delve
+# go install github.com/go-delve/delve/cmd/dlv
+# cd ..
+# rm -rf delve
+# cd $HOME/Downloads
+
+# cargo install ytop bandwhich procs topgrade
+
+# wget https://github.com/FreeTubeApp/FreeTube/releases/download/v0.12.0-beta/freetube_0.12.0_amd64.deb
+# sudo dpkg -i freetube_0.12.0_amd64.deb
+# rm freetube_0.12.0_amd64.deb
+
+# docker volume create portainer_data
+# docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+
+# sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+# fc-cache -vf
+
+# wget https://ltspice.analog.com/software/LTspiceXVII.exe
+# WINEARCH=win32 WINEPREFIX=$HOME/.wine32 wine LTspiceXVII.exe
+# rm LTspiceXVII.exe
+
+wget https://www.saturnpcb.com/wp-content/Toolkit/Saturn_PCB_Toolkit_V8.04_Setup.exe
+WINEARCH=win32 WINEPREFIX=$HOME/.wine32 wine Saturn_PCB_Toolkit_V8.04_Setup.exe
+rm Saturn_PCB_Toolkit_V8.04_Setup.exe
+
+sudo flatpak install calibre
 
 
-
-# docker portainer
-# straberry
-# zsnes
-# fc-cache
-# jupyter
-#golang & delve
-# gvim
-# freetube
-# signal
-# sudo apt install calibre-bin
-# ssh keys
-# ytop
-# bandwhich
-# procs
-# dust
-# starship.rs
 
 echo "TODO: removed dunst, test i3 is ok"
-echo "TODO: Install ltspice and saturn pcb on a windows VM"
