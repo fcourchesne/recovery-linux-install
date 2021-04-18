@@ -211,13 +211,14 @@ printf "TODO: Add on USB key with this VM image: nomachine, iso drivers for qemu
 # WINEARCH=win32 WINEPREFIX=$HOME/.wine32 wine LTspiceXVII.exe
 # rm LTspiceXVII.exe
 
-wget https://www.saturnpcb.com/wp-content/Toolkit/Saturn_PCB_Toolkit_V8.04_Setup.exe
-WINEARCH=win32 WINEPREFIX=$HOME/.wine32 wine Saturn_PCB_Toolkit_V8.04_Setup.exe
-rm Saturn_PCB_Toolkit_V8.04_Setup.exe
+# wget https://www.saturnpcb.com/wp-content/Toolkit/Saturn_PCB_Toolkit_V8.04_Setup.exe
+# WINEARCH=win32 WINEPREFIX=$HOME/.wine32 wine Saturn_PCB_Toolkit_V8.04_Setup.exe
+# rm Saturn_PCB_Toolkit_V8.04_Setup.exe
 
-sudo flatpak install calibre
-
+# sudo flatpak install calibre
+sudo apt install bpytop mupen64plus-qt dgen
 
 
 echo "TODO: removed dunst, test i3 is ok"
 echo "TODO: Install pyside6"
+echo "TODO: Install fontawesome"
