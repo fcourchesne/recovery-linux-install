@@ -1,3 +1,4 @@
 #!/usr/bin/env python
 if __name__ == "__main__":
-    print("python works")
+    a = 33
+    print("python works {}".format(a))

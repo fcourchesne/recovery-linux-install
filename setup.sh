@@ -234,5 +234,7 @@ wget https://www.saturnpcb.com/wp-content/Toolkit/Saturn_PCB_Toolkit_V8.04_Setup
 WINEARCH=win32 WINEPREFIX=$HOME/.wine32 wine Saturn_PCB_Toolkit_V8.04_Setup.exe
 rm Saturn_PCB_Toolkit_V8.04_Setup.exe
 
+sudo apt install libssl-dev gparted
+
 sudo pip3 install pyside2
 sudo apt -y install python3-pyqt5
