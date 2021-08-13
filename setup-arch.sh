@@ -11,9 +11,25 @@ sudo mv packer/packer /usr/bin/packer
 sudo chmod +x /usr/bin/packer
 sudo rm -rf packer
 packer -Syyu
-packer -S brave nfs-utils base-devel wget neovim gvim xclip unzip unrar ranger  git ncdu tree tmux htop zsh i3 i3blocks thunar tumbler lxappearance blender gimp firefox avrdude gcc gdb llvm filezilla mpv ulauncher hexchat irssi weechat mpd ncmpcpp mpc krita cmake kicad wine winetricks ulauncher hexedit feh neofetch openssh bleachbit filelight scrot ffmpeg vlc handbrake pandoc gcompris-qt scratch darktable rawtherapee inkscape okular rsync filezilla audacity lmms
-packer -S clamav clamtk a52dec faac flac jasper lame wavpack x264 thunderbird p7zip unrar tar conky kodi-x11 arduino vsftpd unclutter picom blueman rxvt-unicode fish parcellite nitrogen openbox obconf keychain android-tools typescript obs-studio fbreader flameshot remmina libreoffice-fresh gufw ktorrent yakuake speedcrunch kfind redshift llvm lldb ripgrep ctop signal-desktop kdenlive picard  timeshift aria2 stacer wireshark-qt aircrack-ng radare2 nmap virt-manager openscad foliate dictd
-packer -S digikam artha insync go strawberry zsnes python python-setuptools python-pandas python-numpy python-matplotlib python-ipdb rtorrent python-mpd2 python-virtualenv python-psycopg2 python-pip python-plotly python-requests jupyter gerbv bpytop mupen64plus-qt dgen-sdl freecad visual-studio-code-bin bitwarden dolphin-emu joplin-desktop typora xorg-drivers xf86-input-wacom darktable chirp calibre
+packer -S brave nfs-utils base-devel wget neovim gvim xclip unzip unrar ranger
+packer -S git ncdu tree tmux htop zsh i3 i3blocks thunar tumbler lxappearance 
+packer -S blender gimp firefox avrdude gcc gdb llvm filezilla mpv ulauncher 
+packer -S hexchat irssi weechat mpd ncmpcpp mpc krita cmake kicad wine winetricks 
+packer -S ulauncher hexedit feh neofetch openssh bleachbit filelight scrot ffmpeg 
+packer -S vlc handbrake pandoc gcompris-qt scratch darktable rawtherapee inkscape 
+packer -S okular rsync filezilla audacity lmms clamav clamtk a52dec faac flac jasper
+packer -S lame wavpack x264 thunderbird p7zip unrar tar conky kodi-x11 arduino 
+packer -S vsftpd unclutter picom blueman rxvt-unicode fish parcellite nitrogen 
+packer -S openbox obconf keychain android-tools typescript obs-studio fbreader 
+packer -S flameshot remmina libreoffice-fresh gufw ktorrent yakuake speedcrunch 
+packer -S kfind redshift llvm lldb ripgrep ctop signal-desktop kdenlive picard
+packer -S timeshift aria2 stacer wireshark-qt aircrack-ng radare2 nmap virt-manager 
+packer -S openscad foliate dictd digikam artha insync go strawberry zsnes python 
+packer -S python-setuptools python-pandas python-numpy python-matplotlib python-ipdb 
+packer -S rtorrent python-mpd2 python-virtualenv python-psycopg2 python-pip python-plotly 
+packer -S python-requests jupyter gerbv bpytop mupen64plus-qt dgen-sdl freecad 
+packer -S visual-studio-code-bin bitwarden dolphin-emu joplin-desktop typora 
+packer -S xorg-drivers xf86-input-wacom darktable chirp calibre
 packer -S delve ttf-font-awesome plank freetube lbry-desktop-git docker
 
 ####### ZSH #######
